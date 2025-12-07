@@ -281,8 +281,8 @@ cursor {
 
 spawn-sh-at-startup "sleep 1.1 && waybar"
 spawn-at-startup "mako &"
-spawn-at-startup "swww-daemon"
-spawn-sh-at-startup "swww img ~/Wallpapers/wallpaper-debian.png --transition-type simple --transition-duration 1.0"
+spawn-at-startup "awww-daemon"
+spawn-sh-at-startup "awww img ~/Wallpapers/wallpaper-debian.png --transition-type simple --transition-duration 1.0"
 spawn-at-startup "xwayland-satellite"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -376,9 +376,9 @@ window-rule {
     opacity 0.85
 }
 
-// Keep swww-daemon as the regular background (not in backdrop)
+// Keep awww-daemon as the regular background (not in backdrop)
 layer-rule {
-    match namespace="^swww-daemon$"
+    match namespace="^awww-daemon$"
     place-within-backdrop false
 }
 
