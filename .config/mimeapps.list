@@ -1,0 +1,23 @@
+[Default Applications]
+x-scheme-handler/http=userapp-Firefox-IMZYG3.desktop
+x-scheme-handler/https=userapp-Firefox-IMZYG3.desktop
+x-scheme-handler/chrome=userapp-Firefox-IMZYG3.desktop
+text/html=userapp-Firefox-IMZYG3.desktop
+application/x-extension-htm=userapp-Firefox-IMZYG3.desktop
+application/x-extension-html=userapp-Firefox-IMZYG3.desktop
+application/x-extension-shtml=userapp-Firefox-IMZYG3.desktop
+application/xhtml+xml=userapp-Firefox-IMZYG3.desktop
+application/x-extension-xhtml=userapp-Firefox-IMZYG3.desktop
+application/x-extension-xht=userapp-Firefox-IMZYG3.desktop
+video/mp4=mpv.desktop
+video/x-matroska=mpv.desktop
+video/webm=mpv.desktop
+video/avi=mpv.desktop
+video/x-msvideo=mpv.desktop
+video/quicktime=mpv.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Firefox-IMZYG3.desktop;
+x-scheme-handler/https=userapp-Firefox-IMZYG3.desktop;
+x-scheme-handler/chrome=userapp-Firefox-IMZYG3.desktop;
+video/mp4=firefox.desktop;

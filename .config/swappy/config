@@ -1,0 +1,7 @@
+[Default]
+save_dir=$HOME/Pictures/Screenshots
+save_filename_format=screenshot-%Y%m%d-%H%M%S.png
+paint_mode=rectangle
+line_size=1
+fill_shape=false
+custom_color=#ff0000ff

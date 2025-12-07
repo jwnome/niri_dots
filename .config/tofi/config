@@ -1,0 +1,40 @@
+# Tofi Configuration
+
+# History
+history = false
+
+# Layout
+horizontal = true
+width = 2544
+height = 40
+anchor = top
+margin-top = 4
+margin-left = 8
+margin-right = 8
+
+# Output
+output = eDP-1
+
+# Font
+font = Hack
+font-size = 10
+text-color = #3A3A3A
+prompt-color = #D8C8E8
+selection-color = #D8C8E8
+input-color = #D8C8E8
+prompt-text = ""
+result-spacing = 20
+
+# Background
+background-color = #060809F2
+
+# Border
+border-width = 1
+border-color = #6A9DB8
+corner-radius = 10
+
+# Padding (adjust as needed)
+padding-top = 2
+padding-bottom = 0
+padding-left = 0
+padding-right = 0
