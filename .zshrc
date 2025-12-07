@@ -33,6 +33,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ll='ls -al'
+alias nmc='./.config/waybar/scripts/nmcli_commands.sh'
 
 # User-specific functions (only for regular user, not root)
 if [[ $EUID -ne 0 ]]; then
