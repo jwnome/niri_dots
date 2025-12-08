@@ -74,7 +74,7 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    focus-follows-mouse max-scroll-amount="100%"
+    focus-follows-mouse max-scroll-amount="95%"
 }
 
 gestures {
@@ -101,9 +101,9 @@ output "eDP-1" {
     transform "normal"
     position x=0 y=1440
     focus-at-startup
-    // hot-corners {
-    //     off
-    // }
+    hot-corners {
+         off
+    }
     layout {
         background-color "#000000"
     }
@@ -112,10 +112,9 @@ output "DP-1" {
     mode "2560x1440@59.951"
     scale 1
     position x=0 y=0
-    // hot-corners {
-    //     // off
-    //     top-left
-    // }
+    hot-corners {
+         off
+    }
     layout {
         background-color "#000000"
     }
@@ -282,7 +281,7 @@ cursor {
 spawn-sh-at-startup "sleep 1.1 && waybar"
 spawn-at-startup "mako &"
 spawn-at-startup "awww-daemon"
-spawn-sh-at-startup "awww img ~/Wallpapers/wallpaper-debian.png --transition-type simple --transition-duration 1.0"
+spawn-sh-at-startup "awww img ~/Wallpapers/wallpaper-fedora.png --transition-type simple --transition-duration 1.0"
 spawn-at-startup "xwayland-satellite"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -330,13 +329,13 @@ animations {
 // }
 
 // Open the Firefox picture-in-picture player as floating by default.
-window-rule {
+// window-rule {
     // This app-id regular expression will work for both:
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
+    // match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    // open-floating true
+// }
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
@@ -364,9 +363,15 @@ window-rule {
     opacity 0.85
 }
 
+// VSCodium rules
+window-rule {
+    match app-id="codium"
+    opacity 0.85
+}
+
 // Firefox with same opacity as Thunar, but only on new tab page
 window-rule {
-    match app-id=r#"firefox$"# title="^Mozilla Firefox$"
+    match app-id=r#"firefox-nightly$"# title="^Firefox Nightly$"
     opacity 0.85
 }
 
@@ -408,11 +413,11 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Terminal" { spawn "foot"; }
     Mod+A hotkey-overlay-title="Applications" { spawn "tofi-drun" "--drun-launch=true"; }
-    Mod+W hotkey-overlay-title="Web Browser" { spawn "firefox"; }
+    Mod+W hotkey-overlay-title="Web Browser" { spawn "firefox-nightly"; }
     Mod+Shift+W hotkey-overlay-title="Fallback Browser" { spawn "google-chrome-stable"; }
     Ctrl+Alt+S { spawn "~/.config/niri/screenshot.sh"; }
-    Ctrl+Alt+R { spawn "~/.config/niri/record.sh"; }
     Mod+E hotkey-overlay-title="File Explorer" { spawn "thunar"; }
+    Ctrl+Alt+R { spawn "sh" "-c" "/home/jwno/.config/niri/record.sh"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
