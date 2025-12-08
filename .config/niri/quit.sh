@@ -1,4 +1,5 @@
 #!/bin/bash
-awww img ~/Wallpapers/wallpaper-black.png --transition-type simple --transition-duration 0.25
-sleep 0.3
+killall waybar
+awww img ~/Wallpapers/wallpaper-black.png --transition-type simple --transition-duration 0.5
+sleep 1.0
 niri msg action quit --skip-confirmation
