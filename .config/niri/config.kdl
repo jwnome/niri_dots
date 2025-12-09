@@ -371,7 +371,7 @@ window-rule {
 
 // Firefox with same opacity as Thunar, but only on new tab page
 window-rule {
-    match app-id=r#"firefox-nightly$"# title="^Firefox Nightly$"
+    match app-id=r#"firefox$"# title="^Firefox$"
     opacity 0.85
 }
 
