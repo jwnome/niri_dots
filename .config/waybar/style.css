@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: Hack;
-    font-size: 15px;
+    font-size: 16px;
     min-height: 0;
     padding-top: 1px;
 }
@@ -49,6 +49,7 @@ window#waybar.empty #window {
 
 #clock {
     color: #F5F5DC;
+    font-size: 19px;
 }
 #battery,
 #network,
@@ -56,14 +57,27 @@ window#waybar.empty #window {
 }
 
 #battery.charging {
+    background-color: transparent;
     color: #26A65B;
 }
 
 #battery.warning:not(.charging) {
-    color: #ffb86c;
+    background-color: transparent;
+    color: #FFD700;
 }
 
 #battery.critical:not(.charging) {
+    background-color: transparent;
+    color: #ff5555;
+}
+
+#battery.charging.warning {
+    background-color: transparent;
+    color: #FFD700;
+}
+
+#battery.charging.critical {
+    background-color: transparent;
     color: #ff5555;
 }
 
@@ -100,7 +114,7 @@ window#waybar.empty #window {
 }
 
 #memory.critical {
-    color: #ff5555;  /* Red */
+    color: #B22222;  /* Darker red (firebrick) */
 }
 
 #clock {
