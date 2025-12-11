@@ -2,7 +2,7 @@
     "layer": "top",
     "position": "top",
     "output": "eDP-1",
-    "height": 35,
+    "height": 45,
     "spacing": 15,
     "margin-top": 4,
     "margin-left": 8,
@@ -10,7 +10,7 @@
 
     "modules-left": ["network", "bluetooth", "custom/window-count", "niri/window"],
     "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "memory", "battery", "custom/battery-health"],
+    "modules-right": ["tray", "wireplumber", "memory", "battery", "custom/battery-health"],
 
     // Modules in left-to-right order
 
@@ -54,10 +54,10 @@
     "memory": {
         "interval": 10,
         "states": {
-            "warning": 51,
-            "critical": 76
+            "warning": 65,
+            "critical": 80
         },
-        "format": " <span color='#F5F5DC'>{percentage}%</span>",
+        "format": " <span color='#F5F5DC'>{percentage}%</span>",
         "tooltip-format": "RAM: {percentage}%\nUsed: {used:0.2f}G\nAvailable: {avail:0.2f}G",
     },
 
@@ -77,8 +77,8 @@
 
     "battery": {
         "states": {
-            "warning": 30,
-            "critical": 15
+            "warning": 35,
+            "critical": 25
         },
         "format": "{icon} <span color='#F5F5DC'>{capacity}%</span>",
         "format-charging": " <span color='#F5F5DC'>{capacity}%</span>",
