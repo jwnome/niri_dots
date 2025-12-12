@@ -9,7 +9,7 @@ mkdir -p ~/.config/gtk-3.0
 mkdir -p ~/.config/gtk-4.0
 
 # Extract theme and icon archives
-tar -xf ~/.local/share/themes/Juno-ocean.tar.xz -C ~/.local/share/themes/
+tar -xf ~/.local/share/themes/Juno-ocean.tar -C ~/.local/share/themes/
 tar -xf ~/.local/share/icons/Future-cyan-cursors.tar.gz -C ~/.local/share/icons/
 tar -xf ~/.local/share/icons/Newaita-reborn-dracula-dark.tar.xz -C ~/.local/share/icons/
 
