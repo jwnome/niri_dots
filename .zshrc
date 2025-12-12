@@ -24,6 +24,9 @@ fi
 # Path configuration
 export PATH="$HOME/.local/bin:$PATH"
 
+# Rust/Cargo
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"
+
 # Environment variables
 export EDITOR="vim"
 export VISUAL="vim"
